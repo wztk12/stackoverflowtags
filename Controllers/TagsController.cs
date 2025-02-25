@@ -9,10 +9,12 @@ namespace StackOverflowTags.Controllers
     public class TagsController : ControllerBase
     {
         private readonly TagsService _tagsService;
+        private readonly ILogger _logger;
 
-        public TagsController(TagsService tagsService)
+        public TagsController(TagsService tagsService, ILogger logger)
         {
             _tagsService = tagsService;
+            _logger = logger;
         }
 
         /// <summary>
@@ -35,9 +37,10 @@ namespace StackOverflowTags.Controllers
                 var tags = await _tagsService.GetTags(page, pageSize, sortBy, order);
                 return Ok(tags);
             }
-            catch (Exception ex)
+            catch(Exception e)
             {
-                return BadRequest(ex.Message);
+                _logger.LogError(e.ToString());
+                throw;
             }
         }
 

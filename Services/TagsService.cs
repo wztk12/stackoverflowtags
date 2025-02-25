@@ -26,12 +26,16 @@ namespace StackOverflowTags.Services
         {
             if (!order.Equals("desc", StringComparison.OrdinalIgnoreCase) && !order.Equals("asc", StringComparison.OrdinalIgnoreCase))
             {
-                LogError(new ArgumentException("Unrecognized parameter.", nameof(order)));
+                var error = new ArgumentException("Unrecognized parameter.", nameof(order));
+                _logger.Error(error, error.Message);
+                throw error;
             }
             
             if (!sortBy.Equals("name", StringComparison.OrdinalIgnoreCase) && !sortBy.Equals("percentage", StringComparison.OrdinalIgnoreCase))
             {
-                LogError(new ArgumentException("Unrecognized parameter.", nameof(sortBy)));
+                var error = new ArgumentException("Unrecognized parameter.", nameof(sortBy));
+                _logger.Error(error, error.Message);
+                throw error;
             }
 
             var query = _dbContext.Tags.AsQueryable();
@@ -56,7 +60,9 @@ namespace StackOverflowTags.Services
                 var response = await _httpClient.GetFromJsonAsync<ApiResponse>($"{BaseApiUrl}&page={i}");
                 if (response?.Items == null)
                 {
-                    LogError(new Exception("Got no results from StackOverflow API."));
+                    var error = new ArgumentNullException("No response from StackOverflow API.", nameof(response));
+                    _logger.Error(error, error.Message);
+                    throw error;
                 }
                 apiTags.AddRange(response!.Items);
             }
@@ -73,12 +79,6 @@ namespace StackOverflowTags.Services
             await _dbContext.SaveChangesAsync();
 
             return tags;
-        }
-
-        private void LogError(Exception e)
-        {
-            _logger.Error(e, e.Message);
-            throw e;
         }
     }
 }
