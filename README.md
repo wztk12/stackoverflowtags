@@ -1,43 +1,41 @@
 StackOverflowTags
 =================
 
-Opis
+Description
 ----
 
-Jest to aplikacja napisana w C#, która wykorzystuje **Serilog** do logowania, **SQLite** jako bazę danych oraz **Swagger** do dokumentacji API. Zawiera **testy jednostkowe i integracyjne**, a jej uruchomienie jest możliwe za pomocą **Docker Compose**. Aplikacja działa wtedy na porcie **5000**.
+This is an application written in C# that uses **Serilog** for logging, **SQLite** as a database, and **Swagger** for API documentation. It contains **unit and integration tests**, and can be run using **Docker Compose**. The application then runs on port **5000**.
 
-Funkcjonalności
----------------
+Functionalities
+----------------
 
-*   **Logowanie** – Serilog zapisuje logi do pliku tekstowego.
-    
-*   **Baza danych** – SQLite jako system bazodanowy.
-    
-*   **Swagger** – Dokumentacja API dostępna w interfejsie Swagger UI.
-    
-*   **Testy** – W projekcie znajdują się **testy jednostkowe** i **integracyjne**.
-    
-*   **Docker** – Aplikację można uruchomić w kontenerze Docker.
-       
+* **Logging** – Serilog saves logs to a text file.
 
-Uruchamianie aplikacji
-----------------------
+* **Database** – SQLite as a database system.
 
-Aby uruchomić aplikację, należy wykonać polecenie:
+* **Swagger** – API documentation available in the Swagger UI.
+
+* **Tests** – The project contains **unit** and **integration** tests.
+
+* **Docker** – The application can be run in a Docker container.
+
+Running the application
+---------------------
+
+To run the application, execute the command:
 
 ```bash
 docker-compose up
 ```
 
-Dokumentacja API
+API Documentation
 ----------------
 
-Po uruchomieniu aplikacji interfejs Swagger UI można znaleźć pod adresem:
+After running the application, the Swagger UI can be found at:
 
 http://localhost:5000/swagger
 
-Logowanie
+Logging
 ---------
 
-Serilog zapisuje logi w pliku **logs{data}.txt**.
-
+Serilog saves logs to the file **logs{data}.txt**.
