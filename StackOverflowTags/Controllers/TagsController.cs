@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using StackOverflowTags.Models;
 using StackOverflowTags.Services;
+using ILogger = Serilog.ILogger;
 
 namespace StackOverflowTags.Controllers
 {
@@ -39,7 +40,7 @@ namespace StackOverflowTags.Controllers
             }
             catch(Exception e)
             {
-                _logger.LogError(e.ToString());
+                _logger.Error(e.Message);
                 throw;
             }
         }

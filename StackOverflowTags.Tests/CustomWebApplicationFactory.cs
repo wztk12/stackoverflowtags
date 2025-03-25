@@ -3,6 +3,8 @@ using StackOverflowTags.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.Sqlite;
 using System.Data.Common;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace StackOverflowTags.Tests
 {

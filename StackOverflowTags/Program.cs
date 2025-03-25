@@ -22,7 +22,7 @@ builder.Services.AddHttpClient<TagsService>();
 Log.Logger = new LoggerConfiguration()
     .WriteTo.File("logs.txt", rollingInterval: RollingInterval.Month)
     .CreateLogger();
-
+builder.Services.AddSingleton(Log.Logger);
 string dbPath = "Database/tags.db";
 
 if (!Directory.Exists(Path.GetDirectoryName(dbPath)))

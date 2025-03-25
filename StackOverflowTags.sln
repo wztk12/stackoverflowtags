@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflowTags", "StackOverflowTags.csproj", "{4EF9EE9E-6E92-4A97-B997-E6DD9F973E22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflowTags", "StackOverflowTags\StackOverflowTags.csproj", "{B172621E-CF8C-4D82-B6AE-E75C2E699B98}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackOverflowTags.Tests", "StackOverflowTags.Tests\StackOverflowTags.Tests.csproj", "{8D4AF337-F65C-41DD-928D-6F86953A91CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4EF9EE9E-6E92-4A97-B997-E6DD9F973E22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4EF9EE9E-6E92-4A97-B997-E6DD9F973E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4EF9EE9E-6E92-4A97-B997-E6DD9F973E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4EF9EE9E-6E92-4A97-B997-E6DD9F973E22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B172621E-CF8C-4D82-B6AE-E75C2E699B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B172621E-CF8C-4D82-B6AE-E75C2E699B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B172621E-CF8C-4D82-B6AE-E75C2E699B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B172621E-CF8C-4D82-B6AE-E75C2E699B98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D4AF337-F65C-41DD-928D-6F86953A91CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D4AF337-F65C-41DD-928D-6F86953A91CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D4AF337-F65C-41DD-928D-6F86953A91CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D4AF337-F65C-41DD-928D-6F86953A91CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
